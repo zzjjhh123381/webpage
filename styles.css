@@ -1,93 +1,88 @@
-/* 全局像素风基础设置 */
+/* 全局像素风重置与基础样式 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* 像素风格核心字体 */
+    /* 核心像素字体，星露谷风格关键 */
     font-family: 'Press Start 2P', cursive;
-    /* 确保像素元素不模糊 */
+    /* 像素元素不模糊 */
     image-rendering: pixelated;
-    image-rendering: crisp-edges;
     -ms-interpolation-mode: nearest-neighbor;
 }
 
-/* 页面基础样式 */
 body {
-    background-color: #1a2b20; /* 星露谷深绿背景 */
-    color: #f0e6d2; /* 米白色文字 */
-    line-height: 1.8;
+    /* 星露谷经典深绿背景 */
+    background-color: #1a2b20;
+    color: #f0e6d2;
+    line-height: 1.6;
     padding: 20px;
 }
 
-/* 导航栏样式 */
-header nav {
-    margin-bottom: 40px;
-}
-
+/* 导航栏 - 像素按钮式 */
 header nav ul {
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
+    margin-bottom: 40px;
 }
 
 header nav a {
     text-decoration: none;
     color: #f0e6d2;
-    border: 4px solid #f0e6d2; /* 像素边框 */
+    /* 像素边框 */
+    border: 4px solid #f0e6d2;
     padding: 10px 15px;
-    background-color: #3b5d49; /* 深绿按钮底 */
+    background-color: #3b5d49;
+    /* 鼠标悬浮效果 */
+    transition: all 0.2s;
     font-size: 14px;
-    transition: all 0.2s ease;
-    display: inline-block;
 }
 
 header nav a:hover {
     background-color: #f0e6d2;
     color: #1a2b20;
-    transform: translateY(-2px); /* 轻微上浮效果 */
 }
 
-/* 主页英雄区 */
+/* 主页英雄区 - 核心视觉区 */
 .hero {
     text-align: center;
     margin-bottom: 60px;
-    padding: 20px;
 }
 
 .doodle {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
+/* 自定义图片像素化处理 */
 .custom-image {
     width: 160px;
     height: 160px;
-    border: 6px solid #7fb069; /* 亮绿色像素边框 */
-    margin: 0 auto 15px;
-    display: block;
+    /* 像素边框+星露谷绿 */
+    border: 6px solid #7fb069;
+    margin-bottom: 10px;
 }
 
 .doodle-text {
     font-size: 18px;
-    color: #7fb069; /* 亮绿色文字 */
-    margin-bottom: 10px;
+    color: #7fb069;
 }
 
 .hero h1 {
     font-size: 32px;
     margin: 20px 0;
     color: #f0e6d2;
-    text-shadow: 4px 4px 0 #3b5d49; /* 像素化文字阴影 */
+    /* 文字像素阴影 */
+    text-shadow: 4px 4px 0 #3b5d49;
 }
 
 .hero p {
     font-size: 16px;
-    color: #a8c3b0; /* 浅绿文字 */
+    color: #a8c3b0;
     margin-bottom: 30px;
 }
 
-/* 社交图标区 */
+/* 社交图标 - 像素框样式 */
 .social-icons {
     display: flex;
     gap: 20px;
@@ -101,56 +96,42 @@ header nav a:hover {
     border: 4px solid #f0e6d2;
     background-color: #3b5d49;
     padding: 5px;
-    transition: all 0.2s ease;
+    transition: all 0.2s;
 }
 
 .icon img:hover {
     background-color: #f0e6d2;
-    transform: scale(1.1); /* 轻微放大效果 */
 }
 
-/* 按钮样式 */
+/* 按钮 - 星露谷标志性橙色按钮 */
 .btn {
     text-decoration: none;
-    background-color: #ff9e2c; /* 星露谷标志性橙色 */
+    background-color: #ff9e2c;
     color: #1a2b20;
     border: 4px solid #f0e6d2;
     padding: 12px 25px;
     font-size: 14px;
-    transition: all 0.2s ease;
-    display: inline-block;
+    transition: all 0.2s;
 }
 
 .btn:hover {
-    background-color: #ffc87c; /* 亮橙色 hover 效果 */
-    transform: translateY(-3px);
+    background-color: #ffc87c;
+    transform: translateY(-2px);
 }
 
-/* 通用区块样式 */
+/* 各板块通用样式 */
 section {
     max-width: 1000px;
     margin: 0 auto 60px;
+    /* 像素边框+背景 */
     border: 6px solid #f0e6d2;
-    background-color: #2d4739; /* 区块背景深绿 */
+    background-color: #2d4739;
     padding: 30px;
-    position: relative;
-}
-
-section::before {
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    right: -10px;
-    bottom: -10px;
-    background-color: #1a2b20;
-    z-index: -1;
-    border: 2px solid #f0e6d2;
 }
 
 section h2 {
     font-size: 24px;
-    color: #ff9e2c; /* 橙色标题 */
+    color: #ff9e2c;
     margin-bottom: 25px;
     text-align: center;
     border-bottom: 4px solid #f0e6d2;
@@ -160,28 +141,20 @@ section h2 {
 section p {
     font-size: 14px;
     margin-bottom: 15px;
-    line-height: 1.8;
 }
 
-/* 家乡景点区 */
+/* 家乡板块 - 景点卡片 */
 .scenic-spots {
     display: flex;
     gap: 30px;
     margin: 30px 0;
-    flex-wrap: wrap;
 }
 
 .spot {
     flex: 1;
-    min-width: 280px;
     border: 4px solid #f0e6d2;
     padding: 20px;
     background-color: #3b5d49;
-    transition: all 0.3s ease;
-}
-
-.spot:hover {
-    transform: translateY(-5px);
 }
 
 .spot h3 {
@@ -199,7 +172,7 @@ section p {
     margin-bottom: 15px;
 }
 
-/* 爱好区块 */
+/* 爱好板块 - 音乐与绘画 */
 .hobby {
     margin-bottom: 40px;
 }
@@ -212,7 +185,7 @@ section p {
     padding-left: 10px;
 }
 
-/* 音乐列表 */
+/* 音乐列表 - 像素点样式 */
 .music-list {
     list-style: none;
     margin: 20px 0;
@@ -222,20 +195,12 @@ section p {
 .music-list li {
     margin-bottom: 15px;
     font-size: 14px;
-    position: relative;
-}
-
-.music-list li::before {
-    content: "■"; /* 像素风格列表符号 */
-    color: #ff9e2c;
-    position: absolute;
-    left: -20px;
 }
 
 .music-list a {
     color: #a8c3b0;
     text-decoration: none;
-    transition: all 0.2s ease;
+    transition: all 0.2s;
 }
 
 .music-list a:hover {
@@ -243,22 +208,16 @@ section p {
     text-decoration: underline;
 }
 
-/* 歌手照片区 */
+/* 歌手照片 - 像素卡片 */
 .singer-photos {
     display: flex;
     gap: 20px;
-    margin: 30px 0;
+    margin: 20px 0;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 .singer {
     text-align: center;
-    transition: all 0.3s ease;
-}
-
-.singer:hover {
-    transform: scale(1.05);
 }
 
 .singer img {
@@ -267,71 +226,43 @@ section p {
     object-fit: cover;
     border: 4px solid #f0e6d2;
     margin-bottom: 10px;
-    background-color: #3b5d49;
 }
 
-.singer p {
-    font-size: 14px;
-    color: #f0e6d2;
-}
-
-/* 绘画作品区 */
+/* 绘画作品 - 像素画廊 */
 .painting-collection {
     display: flex;
     gap: 20px;
     margin-top: 20px;
-    flex-wrap: wrap;
 }
 
 .painting-collection img {
     flex: 1;
-    min-width: 200px;
     height: 180px;
     object-fit: cover;
     border: 4px solid #f0e6d2;
-    background-color: #3b5d49;
-    transition: all 0.3s ease;
 }
 
-.painting-collection img:hover {
-    transform: rotate(2deg) scale(1.03);
-}
-
-/* 页脚样式 */
+/* 页脚 - 像素风底部 */
 footer {
     text-align: center;
     font-size: 12px;
     color: #a8c3b0;
-    margin-top: 60px;
+    margin-top: 40px;
     padding-top: 20px;
     border-top: 4px solid #3b5d49;
 }
 
-/* 响应式适配 */
+/* 响应式适配 - 小屏幕保持像素感 */
 @media (max-width: 768px) {
+    .scenic-spots, .singer-photos, .painting-collection {
+        flex-direction: column;
+    }
+
+    header nav ul {
+        flex-wrap: wrap;
+    }
+
     .hero h1 {
         font-size: 24px;
-    }
-
-    section {
-        padding: 20px;
-    }
-
-    .scenic-spots, 
-    .singer-photos, 
-    .painting-collection {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .singer img,
-    .painting-collection img {
-        width: 100%;
-        max-width: 300px;
-    }
-
-    header nav a {
-        font-size: 12px;
-        padding: 8px 12px;
     }
 }
